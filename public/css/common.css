@@ -1,0 +1,39 @@
+.header__inner {
+    background-color: white;
+    padding: 20px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #F1F1F1;
+}
+
+.header__ttl {
+    font-size: 24px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.header__nav>form {
+    margin-left: 24px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__inner {
+    text-align: center;
+}
+
+.footer__ttl {
+    padding: 12px 0;
+}

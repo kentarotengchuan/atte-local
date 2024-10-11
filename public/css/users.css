@@ -1,0 +1,63 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    height: 100%;
+}
+.content {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+    background-color: #F1F1F1;
+}
+.users-table{
+    width:100%;
+}
+.users {
+    padding:24px 0;
+    text-align: center;
+    margin:0 auto;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+tbody{
+    width:100%;
+}
+.table__header {
+    width: 100%;
+    text-align: center;
+}
+
+.table__header>th {
+    display: block;
+    text-align: center;
+    width: 800px;
+    border-top: solid 1px black;
+    border-collapse: collapse;
+    padding:24px 240px;
+}
+
+.table__data {
+    width: 100%;
+}
+
+.table__data>td {
+    display: block;
+    text-align: center;
+    width: 800px;
+    border-top: solid 1px black;
+    border-collapse: collapse;
+    padding:24px 240px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
