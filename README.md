@@ -1,12 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
 ## Atte
 
 このアプリは勤怠管理アプリです。ユーザー作成、メール認証、ログインを経て勤怠登録画面に進むことができます。登録された勤怠データは日付ごと、ユーザーごとに管理画面から確認することができます。
@@ -15,47 +6,60 @@
 <img src="https://github.com/user-attachments/assets/3d4b0e18-1b9c-4afa-ad34-04d2cecfd977">
 </p>
 
-## Learning Laravel
+## 作成した目的
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+模擬案件を通して実践に近い開発経験を積むため。
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## アプリケーションURL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+[デプロイのURL](http://54.238.66.93/)
 
-## Laravel Sponsors
+このアプリはユーザー登録と、メールアドレスを用いた認証によって利用することができます。
+また、ローカル環境上
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 他のリポジトリ
 
-### Premium Partners
+## 機能一覧
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+・会員登録・・・Laravel Breezeを使用
+・ログイン・・・Laravel Breezeを使用
+・ログアウト・・・Laravel Breezeを使用
+・メール認証・・・Laravel Breezeを使用
 
-## Contributing
+・勤務開始・・・日を跨いだ時点で翌日の出勤操作に切り替える
+・勤務終了・・・日を跨いだ時点で翌日の出勤操作に切り替える
+・休憩開始・・・一日に何度でも可能
+・休憩終了・・・一日に何度でも可能
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+・日付別勤怠情報取得
+・ユーザー別勤怠情報取得
 
-## Code of Conduct
+・ページネーション・・・5件ずつ取得
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 使用技術（実行環境）
 
-## Security Vulnerabilities
+PHP 8.2.24
+Laravel sail
+Laravel Breeze
+Laravel Framework 11.27.2
+EC2(Amazon Linux2)
+RDS(mysql 8.0.32)
+Mailpit v1.20.5（ローカル環境のみ）
+phpmyadmin(ローカル環境のみ)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## テーブル設計
 
-## License
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8a11063e-6d99-4c15-8457-98f04e7bee1b">
+</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# atte-local
+## ER図
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/c02a7bd0-7801-46ea-b3e3-08e55cb910c6">
+</p>
+
+## テスト用ユーザー
+    ユーザー名：test
+    メールアドレス：test@test.com
+    パスワード：hogehoge
