@@ -24,22 +24,17 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "name" => "required|unique:users",
-            "email" => "required|email|unique:users",
-            "password" => "required|confirmed"
+            "email" => "required|email",
+            "password" => "required"
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => '名前を入力してください',
-            'name.unique' => 'この名前は既に使用されています',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
-            'email.unique' => 'このアドレスは既に使用されています',
             'password.required' => 'パスワードを入力してください',
-            'password.confirmed' => 'パスワードが一致しません',
         ];
     }
 
