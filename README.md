@@ -15,7 +15,6 @@
 [デプロイのURL](http://54.238.66.93/)
 
 このアプリはユーザー登録と、メールアドレスを用いた認証によって利用することができます。
-また、ローカル環境上
 
 ### 他のリポジトリ
 
@@ -59,7 +58,21 @@ phpmyadmin(ローカル環境のみ)
 <img src="https://github.com/user-attachments/assets/c02a7bd0-7801-46ea-b3e3-08e55cb910c6">
 </p>
 
-## テスト用ユーザー
+## ローカル環境の構築手順
+
+1.コマンドライン上で任意のパスに「git clone」を行う。
+
+2.アプリディレクトリに移動し「sudo cp .env.example .env」を実行。
+
+3.「./vendor/bin/sail up -d」を実行し、アプリを立ち上げる。
+
+4.「./vendor/bin/sail artisan key:generate」を実行し、キーを発行する。
+
+5.「./vendor/bin/sail artisan migrate:fresh」を実行し、マイグレーションする。
+
+6.「./vendor/bin/sail artisan db:seed」を実行し、テストユーザーを作成する。
     ユーザー名：test
     メールアドレス：test@test.com
     パスワード：hogehoge
+
+7.ブラウザ上でlocalhostにアクセスして、テストユーザーでログイン、もしくはユーザー作成→メール認証→ログインを行う。(ローカル環境では8025番ポートにおいてMailpitでの認証を行う)
