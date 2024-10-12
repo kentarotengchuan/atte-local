@@ -21,16 +21,23 @@
 ## 機能一覧
 
 ・会員登録・・・Laravel Breezeを使用
+
 ・ログイン・・・Laravel Breezeを使用
+
 ・ログアウト・・・Laravel Breezeを使用
+
 ・メール認証・・・Laravel Breezeを使用
 
 ・勤務開始・・・日を跨いだ時点で翌日の出勤操作に切り替える
+
 ・勤務終了・・・日を跨いだ時点で翌日の出勤操作に切り替える
+
 ・休憩開始・・・一日に何度でも可能
+
 ・休憩終了・・・一日に何度でも可能
 
 ・日付別勤怠情報取得
+
 ・ユーザー別勤怠情報取得
 
 ・ページネーション・・・5件ずつ取得
@@ -38,12 +45,19 @@
 ## 使用技術（実行環境）
 
 PHP 8.2.24
+
 Laravel sail
+
 Laravel Breeze
+
 Laravel Framework 11.27.2
+
 EC2(Amazon Linux2)
+
 RDS(mysql 8.0.32)
+
 Mailpit v1.20.5（ローカル環境のみ）
+
 phpmyadmin(ローカル環境のみ)
 
 ## テーブル設計
@@ -71,8 +85,13 @@ phpmyadmin(ローカル環境のみ)
 5.「./vendor/bin/sail artisan migrate:fresh」を実行し、マイグレーションする。
 
 6.「./vendor/bin/sail artisan db:seed」を実行し、テストユーザーを作成する。
+
     ユーザー名：test
+
     メールアドレス：test@test.com
+
     パスワード：hogehoge
 
-7.ブラウザ上でlocalhostにアクセスして、テストユーザーでログイン、もしくはユーザー作成→メール認証→ログインを行う。(ローカル環境では8025番ポートにおいてMailpitでの認証を行う)
+7.ブラウザ上でlocalhostにアクセスして、テストユーザーでログイン、もしくはユーザー作成→メール認証→ログインを行う。
+
+(ローカル環境では8025番ポートにおいてMailpitでの認証を行う)
