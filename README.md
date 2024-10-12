@@ -12,7 +12,7 @@
 このアプリは勤怠管理アプリです。ユーザー作成、メール認証、ログインを経て勤怠登録画面に進むことができます。登録された勤怠データは日付ごと、ユーザーごとに管理画面から確認することができます。
 
 <p align="center">
-<img src="images/stamp.png">
+![stamp](https://github.com/user-attachments/assets/3d4b0e18-1b9c-4afa-ad34-04d2cecfd977)
 </p>
 
 ## Learning Laravel
