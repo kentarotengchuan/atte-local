@@ -78,13 +78,21 @@ phpmyadmin(ローカル環境のみ)
 
 2.アプリディレクトリに移動し「sudo cp .env.example .env」を実行。
 
-3.「./vendor/bin/sail up -d」を実行し、アプリを立ち上げる。
+3.「docker run --rm \
+  -v $(pwd):/opt \
+  -w /opt \
+  laravelsail/php82-composer:latest \
+  bash -c "composer install"」を実行してcomposerをインストール。
 
-4.「./vendor/bin/sail artisan key:generate」を実行し、キーを発行する。
+4.「sudo chown -R {Linuxのユーザー名} atte-local」で所有者の変更。
 
-5.「./vendor/bin/sail artisan migrate:fresh」を実行し、マイグレーションする。
+4.「./vendor/bin/sail up -d」を実行し、アプリを立ち上げる。
 
-6.「./vendor/bin/sail artisan db:seed」を実行し、テストユーザーを作成する。
+5.「./vendor/bin/sail artisan key:generate」を実行し、キーを発行する。
+
+6.「./vendor/bin/sail artisan migrate:fresh」を実行し、マイグレーションする。
+
+7.「./vendor/bin/sail artisan db:seed」を実行し、テストユーザーを作成する。
 
     ユーザー名：test
 
@@ -92,6 +100,6 @@ phpmyadmin(ローカル環境のみ)
 
     パスワード：hogehoge
 
-7.ブラウザ上でlocalhostにアクセスして、テストユーザーでログイン、もしくはユーザー作成→メール認証→ログインを行う。
+8.ブラウザ上でlocalhostにアクセスして、テストユーザーでログイン、もしくはユーザー作成→メール認証→ログインを行う。
 
 (ローカル環境では8025番ポートにおいてMailpitでの認証を行う)
