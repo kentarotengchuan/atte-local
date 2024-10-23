@@ -79,10 +79,11 @@ phpmyadmin(ローカル環境のみ)
 2.アプリディレクトリに移動し「sudo cp .env.example .env」を実行。
 
 3.「docker run --rm \
-  -v $(pwd):/opt \
-  -w /opt \
-  laravelsail/php82-composer:latest \
-  bash -c "composer install"」を実行してcomposerをインストール。
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php82-composer:latest \
+    composer install --ignore-platform-reqs」を実行してcomposerをインストール。
 
 4.「sudo chown -R {Linuxのユーザー名} atte-local」で所有者の変更。
 
